@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: staging
+data:
+  APP_NAME: "demo"
+  DDL_AUTO: "update"
+  SHOW_SQL: "true"
+  MAIL_HOST: "sandbox.smtp.mailtrap.io"
+  MAIL_PORT: "25"
+  MAIL_PROTOCOL: "smtp"
+  VERIFICATION_URL: "auth/verify/"
+  RESET_PASSWORD_URL: "reset-password/"
+  JWT_EXPIRATION: "900000"
+  SWAGGER_PATH: "/swagger-ui.html"
+  SWAGGER_ENABLED: "true"
+  API_DOCS_PATH: "/v3/api-docs"
+  LOG_SECURITY_LEVEL: "DEBUG"
+  LOG_HIBERNATE_SQL: "DEBUG"
+  LOG_HIBERNATE_BINDER: "TRACE"
+  SPRING_DATASOURCE_DRIVER_CLASS_NAME: "com.mysql.cj.jdbc.Driver"
+  SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: "org.hibernate.dialect.MySQL8Dialect"
+  MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: "health,info"
+  MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS: "always"
+  MANAGEMENT_ENDPOINT_HEALTH_PROBES_ENABLED: "true"
+  MANAGEMENT_HEALTH_MAIL_ENABLED: "false"
