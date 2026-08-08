@@ -6,7 +6,7 @@ metadata:
   labels:
     app: backend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: backend
@@ -19,7 +19,7 @@ spec:
         - name: dockerhub-secret
       containers:
         - name: backend
-          image: akrembejaoui/migration:backend-v1
+          image: akrembejaoui/migration:backend-v4
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
