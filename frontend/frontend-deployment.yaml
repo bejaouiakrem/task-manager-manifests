@@ -19,7 +19,7 @@ spec:
         - name: dockerhub-secret
       containers:
         - name: frontend
-          image: akrembejaoui/migration:frontend-7
+          image: akrembejaoui/migration:frontend-8
           imagePullPolicy: Always
           ports:
             - containerPort: 80
